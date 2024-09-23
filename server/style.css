@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+}
+
+#data {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chart-container {
+    width: 45%;
+    margin: 20px;
+}
+
+@media (max-width: 768px) { /* 화면이 768px 이하일 때 */
+    .chart-container {
+        width: 100%; /* 작은 화면에서는 차트를 전체 너비로 확장 */
+        margin: 10px;
+    }
+}
+
