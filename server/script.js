@@ -70,16 +70,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
         options: {
             responsive: true, // 창 크기에 따라 그래프 크기 조정
             maintainAspectRatio: false, // 화면 비율에 따라 크기 유지 안함
+            aspectRatio: 1, // 가로:세로 비율을 1:1로 설정 (값을 낮추면 세로가 길어짐)
             scales: {
                 x: {
                     type: 'time',
                     time: {
                         unit: 'hour',
-                        tooltipFormat: 'yyyy.MM.dd HH:mm'
+                        tooltipFormat: 'dd.MM.yyyy HH:mm'
                     }
                 },
                 y: {
-                    beginAtZero: true
+                    beginAtZero: true,
+                    min: 0, // y축 최소값
+                    max: 100, // y축 최대값
+                    ticks: {
+                        stepSize: 10, // y축 간격을 10으로 설정
+                        //callback: function(value) { 
+                        //    return value + ' %'; // y축 레이블에 '%' 추가
+                        //}
+                    },
                 }
             }
         }

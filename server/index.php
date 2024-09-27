@@ -9,7 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
 </head>
 <body>
-    <h1>Arduino Sensor Data</h1>
+    <h1>Arduino Sensor Data1</h1>
     <p>Last updated: <span id="last-updated"></span></p>
     <div id="data">
         <div class="chart-container">
