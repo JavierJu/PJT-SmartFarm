@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
                     type: 'time',
                     time: {
                         unit: 'hour',
-                        tooltipFormat: 'dd.MM.yyyy HH:mm'
+                        tooltipFormat: 'yyyy.MM.dd HH:mm'
                     }
                 },
                 y: {
