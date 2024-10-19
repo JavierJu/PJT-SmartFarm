@@ -12,7 +12,12 @@
         function controlPump(action) {
             var xhttp = new XMLHttpRequest();
             xhttp.open("GET", "control_pump.php?action=" + action, true);
-            xhttp.send();
+            xhttp.onreadystatechange = function() {
+                if (xhttp.readyState == 4 && xhttp.status == 200) {
+                    alert(xhttp.responseText); // 서버 응답을 경고창으로 표시
+                }
+            };
+        xhttp.send();
         }
     </script>
 
