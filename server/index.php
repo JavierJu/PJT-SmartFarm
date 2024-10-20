@@ -8,7 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chartjs-adapter-date-fns"></script>
 
-    <script>
+    <!-- <script>
         function controlPump(action) {
             var xhttp = new XMLHttpRequest();
             xhttp.open("GET", "control_pump.php?action=" + action, true);
@@ -19,7 +19,7 @@
             };
         xhttp.send();
         }
-    </script>
+    </script> -->
 
 </head>
 <body>
@@ -32,10 +32,10 @@
     </div>
     <script src="script.js"></script>
     
-    <h2>모터 제어</h2>
+    <!-- <h2>모터 제어</h2>
     <button onclick="controlPump('on')">모터 켜기</button>
     <button onclick="controlPump('off')">모터 끄기</button>
-    <button onclick="controlPump('auto')">자동 제어</button>
+    <button onclick="controlPump('auto')">자동 제어</button> -->
 
 </body>
 </html>
