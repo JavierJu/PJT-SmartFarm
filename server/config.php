@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "javier";
 $password = "@Javierju12";
-$dbname = "test";
+$dbname = "smartfarm_sensordata";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);

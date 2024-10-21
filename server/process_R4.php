@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "javier";
 $password = "@Javierju12";
-$dbname = "test"; // Use the existing database 'test'
+$dbname = "smartfarm_sensordata";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,13 +19,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $light = $_POST['light'];
     $soil_moisture = $_POST['soil_moisture'];
 
-    $sql = "INSERT INTO sensor_readings_R4 (temperature, humidity, light, soil_moisture)
-            VALUES ('$temperature', '$humidity', '$light', '$soil_moisture')";
+    // Validate data (check if they are numeric)
+    if (is_numeric($temperature) && is_numeric($humidity) && is_numeric($light) && is_numeric($soil_moisture)) {
 
-    if ($conn->query($sql) === TRUE) {
-        echo "New record created successfully";
+        // Prepare and bind statement to prevent SQL injection
+        $stmt = $conn->prepare("INSERT INTO sensor_readings_R4 (temperature, humidity, light, soil_moisture) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("dddd", $temperature, $humidity, $light, $soil_moisture);
+
+        if ($stmt->execute()) {
+            echo "New record created successfully";
+        } else {
+            echo "Error: " . $stmt->error;
+        }
+
+        $stmt->close();
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        echo "Invalid input data.";
     }
 } else {
     echo "No data received";
