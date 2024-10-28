@@ -15,10 +15,41 @@ body {
     margin: 20px;
 }
 
-@media (max-width: 768px) { /* 화면이 768px 이하일 때 */
+@media (max-width: 768px) {
+
+    /* 화면이 768px 이하일 때 */
     .chart-container {
-        width: 100%; /* 작은 화면에서는 차트를 전체 너비로 확장 */
+        width: 100%;
+        /* 작은 화면에서는 차트를 전체 너비로 확장 */
         margin: 10px;
     }
 }
 
+.relayControl-container {
+    display: flex;
+    justify-content: right;
+}
+
+.relayControl-container button {
+    font-weight: bold;
+    width: 200px;
+    background-color: white;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 5px;
+    display: block;
+    text-align: center;
+    margin: 0px;
+    color: slateblue;
+    text-decoration: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease;
+    cursor: pointer;
+    float: left;
+}
+
+.relayControl-container button:hover {
+    color: white;
+    background-color: slateblue;
+    transform: scale(1.05);
+}

@@ -97,3 +97,11 @@ document.addEventListener('DOMContentLoaded', (event) => {
     setInterval(fetchData, 5000); // 5초마다 데이터 갱신
     fetchData();
 });
+
+// function openRelayControl() {
+//     window.open(
+//         "http://13.208.254.200/Controlpump/index.html", // 팝업으로 열고 싶은 페이지 URL
+// "RelayControlPopup",  // 팝업 창의 이름
+//         "width=400,height=300,top=100,left=100" // 팝업 크기와 위치 설정
+//     );
+// }
