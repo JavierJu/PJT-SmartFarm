@@ -25,12 +25,12 @@ body {
     }
 }
 
-.relayControl-container {
+/* .relayControl-container {
     display: flex;
     justify-content: right;
-}
+} */
 
-.relayControl-container button {
+/* .relayControl-container button {
     font-weight: bold;
     width: 200px;
     background-color: white;
@@ -52,4 +52,4 @@ body {
     color: white;
     background-color: slateblue;
     transform: scale(1.05);
-}
+} */
